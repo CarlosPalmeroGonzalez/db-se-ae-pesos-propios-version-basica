@@ -1,0 +1,109 @@
+﻿C1,Materiales de albañileria,Arenisca,21.00,27.00,kN/m3,0.00,0.00
+C1,Materiales de albañileria,Basalto,27.00,31.00,kN/m3,0.00,0.00
+C1,Materiales de albañileria,Calizas compactas. Mármoles,28.00,28.00,kN/m3,0.00,0.00
+C1,Materiales de albañileria,Diorita. Gneis,30.00,30.00,kN/m3,0.00,0.00
+C1,Materiales de albañileria,Granito,27.00,30.00,kN/m3,0.00,0.00
+C1,Materiales de albañileria,Sienita. Diorita. Pórfido,28.00,28.00,kN/m3,0.00,0.00
+C1,Materiales de albañileria,Terracota compacta,21.00,27.00,kN/m3,0.00,0.00
+C1,Fábricas,Bloque hueco de cemento,13.00,16.00,kN/m3,0.00,0.00
+C1,Fábricas,Bloque hueco de yeso,10.00,10.00,kN/m3,0.00,0.00
+C1,Fábricas,Ladrillo cerámico macizo,18.00,18.00,kN/m3,0.00,0.00
+C1,Fábricas,Ladrillo cerámico perforado,15.00,15.00,kN/m3,0.00,0.00
+C1,Fábricas,Ladrillo cerámico hueco,12.00,12.00,kN/m3,0.00,0.00
+C1,Fábricas,Ladrillo silicocalcáreo,20.00,20.00,kN/m3,0.00,0.00
+C1,Mampostería con mortero,De arenisca,24.00,24.00,kN/m3,0.00,0.00
+C1,Mampostería con mortero,De basalto,27.00,27.00,kN/m3,0.00,0.00
+C1,Mampostería con mortero,De caliza compacta,26.00,26.00,kN/m3,0.00,0.00
+C1,Mampostería con mortero,De granito,26.00,26.00,kN/m3,0.00,0.00
+C1,Sillería ,De arenisca,26.00,26.00,kN/m3,0.00,0.00
+C1,Sillería ,De arenisca o caliza porosa,24.00,24.00,kN/m3,0.00,0.00
+C1,Sillería ,De basalto,30.00,30.00,kN/m3,0.00,0.00
+C1,Sillería ,De caliza compacta o mármol,28.00,28.00,kN/m3,0.00,0.00
+C1,Sillería ,De granito,28.00,28.00,kN/m3,0.00,0.00
+C1,Hormigones y morteros,Hormigón ligero,9.00,20.00,kN/m3,0.00,0.00
+C1,Hormigones y morteros,Hormigón normal,24.00,24.00,kN/m3,0.00,0.00
+C1,Hormigones y morteros,Hormigón pesado,28.00,50.00,kN/m3,0.00,0.00
+C1,Hormigones y morteros,Mortero de cemento,19.00,23.00,kN/m3,0.00,0.00
+C1,Hormigones y morteros,Mortero de yeso,12.00,28.00,kN/m3,0.00,0.00
+C1,Hormigones y morteros,Mortero de cemento y cal,18.00,20.00,kN/m3,0.00,0.00
+C1,Hormigones y morteros,Mortero de cal,12.00,18.00,kN/m3,0.00,0.00
+C2,Elementos de cobertura,Aislante (lana de vidrio o roca) por cada 10 mm de espesor,0.02,0.02,kN/m2,0.00,0.00
+C2,Elementos de cobertura,Chapas grecadas - Canto 80 mm - Acero 0.8 mm de espesor,0.12,0.12,kN/m2,0.00,0.00
+C2,Elementos de cobertura,Chapas grecadas - Canto 80 mm - Aluminio 0.8 mm de espesor,0.04,0.04,kN/m2,0.00,0.00
+C2,Elementos de cobertura,Chapas grecadas - Canto 80 mm - Plomo 1.5 mm de espesor,0.18,0.18,kN/m2,0.00,0.00
+C2,Elementos de cobertura,Chapas grecadas - Canto 80 mm - Zinc 1.2 mm de espesor,0.10,0.10,kN/m2,0.00,0.00
+C2,Elementos de cobertura,Cartón embreado por capa,0.05,0.05,kN/m2,0.00,0.00
+C2,Elementos de cobertura,Enlistonado,0.05,0.05,kN/m2,0.00,0.00
+C2,Elementos de cobertura,Hoja de plástico armada de 1.2 mm,0.02,0.02,kN/m2,0.00,0.00
+C2,Elementos de cobertura,Pizarra sin enlistonado - Solape simple,0.20,0.20,kN/m2,0.00,0.00
+C2,Elementos de cobertura,Pizarra sin enlistonado - Solape doble,0.30,0.30,kN/m2,0.00,0.00
+C2,Elementos de cobertura,Placas de fibrocemento de 6 mm de espesor,0.18,0.18,kN/m2,0.00,0.00
+C2,Elementos de cobertura,Tablero de madera de 25 mm de espesor,0.15,0.15,kN/m2,0.00,0.00
+C2,Elementos de cobertura,Tablero de rasilla - Una hoja sin revestir,0.40,0.40,kN/m2,0.00,0.00
+C2,Elementos de cobertura,Tablero de rasilla - Una hoja más tendido de yeso,0.50,0.50,kN/m2,0.00,0.00
+C2,Elementos de cobertura,Tejas planas (sin enlistonado) ligeras (2.4 kg/pieza),0.30,0.30,kN/m2,0.00,0.00
+C2,Elementos de cobertura,Tejas planas (sin enlistonado) corrientes (3.0 kg/pieza),0.40,0.40,kN/m2,0.00,0.00
+C2,Elementos de cobertura,Tejas planas (sin enlistonado) pesadas (3.6 kg/pieza),0.50,0.50,kN/m2,0.00,0.00
+C2,Elementos de cobertura,Tejas curvas (sin enlistonado) ligeras (1.6 kg/pieza),0.40,0.40,kN/m2,0.00,0.00
+C2,Elementos de cobertura,Tejas curvas (sin enlistonado) corrientes (2.0 kg/pieza),0.50,0.50,kN/m2,0.00,0.00
+C2,Elementos de cobertura,Tejas curvas (sin enlistonado) pesadas (2.4 kg/pieza),0.60,0.60,kN/m2,0.00,0.00
+C2,Elementos de cobertura,Vidriera (incluida la carpintería) - Vidrio normal de 5 mm de espesor,0.25,0.25,kN/m2,0.00,0.00
+C2,Elementos de cobertura,Vidriera (incluida la carpintería) - Vidrio normal de 6 mm de espesor,0.35,0.35,kN/m2,0.00,0.00
+C3,Elemento de pavimentación,Baldosa hidráulica o cerámica (incluyendo material de agarre) - 0.03 m de espesor total,0.50,0.50,kN/m2,0.00,0.00
+C3,Elemento de pavimentación,Baldosa hidráulica o cerámica (incluyendo material de agarre) - 0.05 m de espesor total,0.80,0.80,kN/m2,0.00,0.00
+C3,Elemento de pavimentación,Baldosa hidráulica o cerámica (incluyendo material de agarre) - 0.07 m de espesor total,1.10,1.10,kN/m2,0.00,0.00
+C3,Elemento de pavimentación,Corcho aglomerado - Tarima de 20 mm y rastrel,0.40,0.40,kN/m2,0.00,0.00
+C3,Elemento de pavimentación,Linóleo o loseta de goma y mortero - 20 mm de espesor total,0.50,0.50,kN/m2,0.00,0.00
+C3,Elemento de pavimentación,Parque y tarima de 20 mm de espesor sobre rastreles,0.40,0.40,kN/m2,0.00,0.00
+C3,Elemento de pavimentación,Tarima de 20 mm de espesor rastreles recibidos con yeso ,0.30,0.30,kN/m2,0.00,0.00
+C3,Elemento de pavimentación,Terrazo sobre mortero - 50 mm de espesor,0.80,0.80,kN/m2,0.00,0.00
+C4,Tabiques,Rasilla de 30 mm de espesor,0.40,0.40,kN/m2,0.00,0.00
+C4,Tabiques,Ladrillo hueco de 45 mm de espesor,0.60,0.60,kN/m2,0.00,0.00
+C4,Tabiques,Ladrillo hueco de 90 mm de espesor,1.00,1.00,kN/m2,0.00,0.00
+C4,Tabiques,Enfoscado o revoco de cemento,0.20,0.20,kN/m2,0.00,0.00
+C4,Tabiques,Revoco de cal. Estuco,0.15,0.15,kN/m2,0.00,0.00
+C4,Tabiques,Guarnecido y enlucido de yeso,0.15,0.15,kN/m2,0.00,0.00
+C5,Elementos constructivos - Forjados,Chapa grecada con capa de hormigon. Grueso total < 1.2 m,2.00,2.00,kN/m2,0.00,0.00
+C5,Elementos constructivos - Forjados,Forjado unidireccional. Luces de hasta 5 m y grueso total < 0.28 m,3.00,3.00,kN/m2,0.00,0.00
+C5,Elementos constructivos - Forjados,Forjado uni o bidireccional. Grueso total < 0.30 m,4.00,4.00,kN/m2,0.00,0.00
+C5,Elementos constructivos - Forjados,Forjado bidireccional. Grueso total < 0.35 m,5.00,5.00,kN/m2,0.00,0.00
+C5,Elementos constructivos - Forjados,Losa maciza de hormigón. Grueso total 0.20 m,5.00,5.00,kN/m2,0.00,0.00
+C5,Elementos constructivos - Cerramientos y particiones (Altura libre de 3.0 m) incluso enlucido,Tablero o tabique simple. Grueso total < 0.09 m,3.00,3.00,kN/m,0.00,0.00
+C5,Elementos constructivos - Cerramientos y particiones (Altura libre de 3.0 m) incluso enlucido,Tabicón u hoja simple de albañilería. Grueso total < 0.14 m,5.00,5.00,kN/m,0.00,0.00
+C5,Elementos constructivos - Cerramientos y particiones (Altura libre de 3.0 m) incluso enlucido,Hoja de Albañilería exterior y tabique interior. Grueso total < 0.25 m,7.00,7.00,kN/m,0.00,0.00
+C5,Elementos constructivos - Solados (incluyendo material de agarre),Lámina pegada o moqueta. Grueso total < 0.03 m,0.50,0.50,kN/m2,0.00,0.00
+C5,Elementos constructivos - Solados (incluyendo material de agarre),Pavimento de madera - cerámico o hidráulico sobre plastón. Grueso total < 0.08 m,1.00,1.00,kN/m2,0.00,0.00
+C5,Elementos constructivos - Solados (incluyendo material de agarre),Placas de piedra o peldañeado. Grueso total < 0.15 m,1.50,1.50,kN/m2,0.00,0.00
+C5,Elementos constructivos - Cubierta sobre forjado (peso en proyección horizontal),Faldones de chapa - tablero o paneles ligeros,1.00,1.00,kN/m2,0.00,0.00
+C5,Elementos constructivos - Cubierta sobre forjado (peso en proyección horizontal),Faldones de placas - tejas o pizarra,2.00,2.00,kN/m2,0.00,0.00
+C5,Elementos constructivos - Cubierta sobre forjado (peso en proyección horizontal),Faldones de teja sibre tableros y tabiques palomeros,3.00,3.00,kN/m2,0.00,0.00
+C5,Elementos constructivos - Cubierta sobre forjado (peso en proyección horizontal),Cubierta plana - recrecido con impermeabilizacion vista protegida,1.50,1.50,kN/m2,0.00,0.00
+C5,Elementos constructivos - Cubierta sobre forjado (peso en proyección horizontal),Cubierta plana a la catalana o invertida con acabado de grava,2.50,2.50,kN/m2,0.00,0.00
+C5,Elementos constructivos - Rellenos,Agua en aljibes o piscinas ,10.00,10.00,kN/m3,0.00,0.00
+C5,Elementos constructivos - Rellenos,Terreno como jardinera incluyendo material de drenaje,20.00,20.00,kN/m3,0.00,0.00
+C6,Materiales almacenables y a granel,Arena,14.00,19.00,kN/m3,30.00,30.00
+C6,Materiales almacenables y a granel,Arena de piedra pómez,7.00,7.00,kN/m3,35.00,35.00
+C6,Materiales almacenables y a granel,Arena y grava,15.00,20.00,kN/m3,35.00,35.00
+C6,Materiales almacenables y a granel,Cal suelta,13.00,13.00,kN/m3,25.00,25.00
+C6,Materiales almacenables y a granel,Cemento clinker suelto,16.00,16.00,kN/m3,28.00,28.00
+C6,Materiales almacenables y a granel,Cemento en sacos,15.00,15.00,kN/m3,0.00,0.00
+C6,Materiales almacenables y a granel,Escoria de altos hornos troceada,17.00,17.00,kN/m3,40.00,40.00
+C6,Materiales almacenables y a granel,Escoria de altos hornos granulada,12.00,12.00,kN/m3,30.00,30.00
+C6,Materiales almacenables y a granel,Escoria de altos hornos triturada de espuma,9.00,9.00,kN/m3,35.00,35.00
+C6,Materiales almacenables y a granel,Poliéster en resina,12.00,12.00,kN/m3,0.00,0.00
+C6,Materiales almacenables y a granel,Polietileno. Poliestirol granulado,6.40,6.40,kN/m3,30.00,30.00
+C6,Materiales almacenables y a granel,Resinas y colas,13.00,13.00,kN/m3,0.00,0.00
+C6,Materiales almacenables y a granel,Yeso suelto,15.00,15.00,kN/m3,25.00,25.00
+C6,Materiales almacenables y a granel,Agua dulce,10.00,10.00,kN/m3,0.00,0.00
+C6,Materiales almacenables y a granel,Carbón en leñas de trozos,4.00,4.00,kN/m3,45.00,45.00
+C6,Materiales almacenables y a granel,Hulla briquetas amontonadas,8.00,8.00,kN/m3,35.00,35.00
+C6,Materiales almacenables y a granel,Hulla briquetas apiladas,13.00,13.00,kN/m3,0.00,0.00
+C6,Materiales almacenables y a granel,Hulla en bruto de mina,10.00,10.00,kN/m3,35.00,35.00
+C6,Materiales almacenables y a granel,Hulla pulverizada,7.00,7.00,kN/m3,25.00,25.00
+C6,Materiales almacenables y a granel,Leña,5.40,5.40,kN/m3,45.00,45.00
+C6,Materiales almacenables y a granel,Lignito briquetas amontonadas,7.80,7.80,kN/m3,30.00,30.00
+C6,Materiales almacenables y a granel,Lignito briquetas apiladas,12.80,12.80,kN/m3,0.00,0.00
+C6,Materiales almacenables y a granel,Lignito en bruto,7.80,9.80,kN/m3,30.00,40.00
+C6,Materiales almacenables y a granel,Lignito pulverizado,4.90,4.90,kN/m3,25.00,40.00
+C6,Materiales almacenables y a granel,Turba negra y seca muy empaquetada,6.00,9.00,kN/m3,0.00,0.00
+C6,Materiales almacenables y a granel,Turba negra y seca amontonada y suelta,3.00,6.00,kN/m3,45.00,45.00
