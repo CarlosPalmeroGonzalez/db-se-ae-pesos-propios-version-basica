@@ -14,15 +14,15 @@
    <children>
       <ScrollPane layoutX="268.0" layoutY="14.0" prefHeight="454.0" prefWidth="918.0">
          <content>
-            <TableView prefHeight="452.0" prefWidth="915.0">
+            <TableView fx:id="tablaCalculo" prefHeight="452.0" prefWidth="915.0">
               <columns>
-                <TableColumn prefWidth="116.0" text="Elemento" />
-                <TableColumn prefWidth="181.0" text="Descripcion" />
-                  <TableColumn prefWidth="131.0" text="Dimensiones" />
-                  <TableColumn prefWidth="91.0" text="Total" />
-                  <TableColumn prefWidth="149.0" text="Peso Específico" />
-                  <TableColumn prefWidth="129.0" text="Unidad" />
-                  <TableColumn prefWidth="117.0" text="Peso Propio" />
+                <TableColumn fx:id="colElemento" prefWidth="116.0" text="Elemento" />
+                <TableColumn fx:id="colDescripcion" prefWidth="181.0" text="Descripcion" />
+                  <TableColumn fx:id="colDimensiones" prefWidth="131.0" text="Dimensiones" />
+                  <TableColumn fx:id="colTotal" prefWidth="91.0" text="Total" />
+                  <TableColumn fx:id="colPesoEspecifico" prefWidth="149.0" text="Peso Específico" />
+                  <TableColumn fx:id="colUnidad" prefWidth="129.0" text="Unidad" />
+                  <TableColumn fx:id="colPesoPropio" prefWidth="117.0" text="Peso Propio" />
               </columns>
             </TableView>
          </content>

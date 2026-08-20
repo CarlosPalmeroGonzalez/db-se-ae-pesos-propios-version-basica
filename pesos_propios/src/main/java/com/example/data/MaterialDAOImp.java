@@ -12,7 +12,7 @@ public class MaterialDAOImp implements MaterialDAO {
 
     @Override
     public ArrayList<Material> informacionMateriales() {
-        File archivo = new File ("src\\main\\resources\\data\\materiales.csv");
+        File archivo = new File ("pesos_propios\\src\\main\\resources\\data\\materiales.csv");
         BufferedReader buffReader = null;
         ArrayList <Material> listaMateriales = new ArrayList <> ();
 

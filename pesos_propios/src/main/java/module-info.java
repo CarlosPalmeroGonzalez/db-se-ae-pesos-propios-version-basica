@@ -3,6 +3,7 @@ module com.example {
     requires javafx.fxml;
     requires javafx.graphics;
     requires lombok;
+    requires javafx.base;
 
     exports com.example.view;
 

@@ -3,18 +3,30 @@ package com.example.controller;
 import java.util.ArrayList;
 
 import com.example.data.MaterialDAOImp;
+import com.example.model.CalculoPesoPropio;
 import com.example.model.Material;
 
+import javafx.beans.property.SimpleObjectProperty;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
 
 public class PrincipalController {
     private ArrayList <Material> listadoMateriales;
     private MaterialDAOImp materialDAO;
+    private ObservableList <CalculoPesoPropio> listadoCalculos = FXCollections.observableArrayList();
+    private static Double totalMetros = 0.0;
+    private static Double totalMetros2 = 0.0;
+    private static Double totalMetros3 = 0.0;
+    private static Double totalPeso = 0.0;
 
     @FXML private Label sumaPesos;
     @FXML private Label sumaVolumen;
@@ -43,6 +55,17 @@ public class PrincipalController {
     @FXML private ComboBox<String> cbMaterial;
     @FXML private ComboBox<String> cbElemento;
 
+    // Explicación => Esta es una tabla de vista que recoge el contenido de objectos "CalculoPesoPropio"
+    @FXML private TableView <CalculoPesoPropio> tablaCalculo;
+    //Explicación => Esta columna pertenece a una tabla de objectos "CaluloPesoPropio" y el valor que va a recoger es un String
+    @FXML private TableColumn <CalculoPesoPropio, String> colElemento;
+    @FXML private TableColumn <CalculoPesoPropio, String> colDescripcion;
+    @FXML private TableColumn <CalculoPesoPropio, String> colDimensiones;
+    @FXML private TableColumn <CalculoPesoPropio, Double> colTotal;
+    @FXML private TableColumn <CalculoPesoPropio, Double> colPesoEspecifico;
+    @FXML private TableColumn <CalculoPesoPropio, String> colUnidad;
+    @FXML private TableColumn <CalculoPesoPropio, Double> colPesoPropio;
+
     @FXML private void initialize() {
         // Mediante nuestra clase MaterialDAOImp, obtenemos todos los datos de nuestro CSV
         materialDAO = new MaterialDAOImp();
@@ -59,7 +82,35 @@ public class PrincipalController {
         });
         
         // Cuando se realiza una acción en el ComboBox de Elementos, cargamos los valores y unidades.
-        cbElemento.setOnAction(event -> cargarValores()); 
+        cbElemento.setOnAction(event -> cargarValores());
+        
+        // Establecemos los valores que se van a introducir en cada columna a través de una función lambda, donde obtenemos 
+        // el valor del elemento "dato" y lo plasmamos en la columna esecífica
+        colElemento.setCellValueFactory (dato -> 
+            new SimpleStringProperty(dato.getValue().getElemento())
+        );
+        colDescripcion.setCellValueFactory(dato ->
+            new SimpleStringProperty(dato.getValue().getDescripcion())
+        );
+        colDimensiones.setCellValueFactory(dato ->
+            new SimpleStringProperty(dato.getValue().getDimensiones())
+        );
+        colTotal.setCellValueFactory(dato ->
+            new SimpleObjectProperty<>(dato.getValue().getTotal())
+        );
+        colPesoEspecifico.setCellValueFactory(dato ->
+            new SimpleObjectProperty<>(dato.getValue().getPesoEspecifico())
+        );
+        colUnidad.setCellValueFactory(dato ->
+            new SimpleStringProperty(dato.getValue().getUnidad())
+        );
+        colPesoPropio.setCellValueFactory(dato ->
+            new SimpleObjectProperty<>(dato.getValue().getPesoPropio())
+        );
+
+        // Introducimos los datos de nuestra tabla dentro de nuestra ObservableList
+        tablaCalculo.setItems(listadoCalculos);
+
     }
 
     @FXML public void calculoPrevio() {
@@ -136,6 +187,41 @@ public class PrincipalController {
     }
 
     @FXML public void addTabla () {
+        if (comprobacionesBasicas()) {
+            String elemento = cbElemento.getValue();
+            String descripcion = tfDescripcion.getText();
+            Double largo = Double.parseDouble(tfLargo.getText());
+            Double ancho = Double.parseDouble(tfAncho.getText()); 
+            Double espesor = Double.parseDouble(tfEspesor.getText());
+            String unidad = lbUnidad1.getText();
+            Double pesoEspecifico = Double.parseDouble(tfValor.getText());
+            String dimensiones;
+            Double total;
+            if (unidad.equals("kN/m3")) {
+                dimensiones = largo + "m x " + ancho + "m x " + espesor + "m";
+                total = largo * ancho * espesor;
+                totalMetros3 += total;
+            }
+            else if (unidad.equals("kN/m2")) {
+                dimensiones = largo + "m x " + ancho + " m";
+                total = largo * ancho;
+                totalMetros2 += total;
+            }
+            else {
+                dimensiones = largo + " m";
+                total = largo;
+                totalMetros += total;
+            }
+            Double pesoPropio = total * pesoEspecifico;
+            totalPeso += pesoPropio;
+            CalculoPesoPropio nuevoCalculo = new CalculoPesoPropio(elemento,descripcion,dimensiones,total,pesoEspecifico,unidad,pesoPropio);
+            listadoCalculos.add(nuevoCalculo);
+
+            sumaMetro.setText(totalMetros.toString());
+            sumaSuperficie.setText(totalMetros2.toString());
+            sumaVolumen.setText(totalMetros3.toString());
+            sumaPesos.setText(totalPeso.toString());
+        }
     }
 
     @FXML public void limpiar () {
@@ -160,6 +246,32 @@ public class PrincipalController {
     }
 
     @FXML public void eliminarFila() {
+        CalculoPesoPropio filaSeleccionada = tablaCalculo.getSelectionModel().getSelectedItem();
+        if (filaSeleccionada != null) {
+            Double totalResta = filaSeleccionada.getTotal();
+            Double pesoResta = filaSeleccionada.getPesoPropio();
+            if (filaSeleccionada.getUnidad().equals("kN/m3")) {
+                totalMetros3 -= totalResta;
+                sumaVolumen.setText(totalMetros3.toString());
+            }
+            else if (filaSeleccionada.getUnidad().equals("kN/m2")) {
+                totalMetros2 -= totalResta;
+                sumaSuperficie.setText(totalMetros2.toString());
+            }
+            else {
+                totalMetros -= totalResta;
+                sumaMetro.setText(totalMetros.toString());
+            }
+            totalPeso -= pesoResta;
+            sumaPesos.setText(totalPeso.toString());
+            
+            listadoCalculos.remove(filaSeleccionada);
+        }
+        else {
+            mensajeAlerta(
+                "ERROR EN LA TABLA DE CALCULOS", 
+                "Estas intentando eliminar una fila que inexistente");
+        }
     }
 
     private void cargarMateriales() {
@@ -255,6 +367,30 @@ public class PrincipalController {
             mensaje = "El dato del largo para el cálculo de peso por metro lineal debe estar relleno (Largo)";
             mensajeAlerta(titulo, mensaje);
             return false;
+            }
+        }
+        if (tfValor.getText().isBlank()) {
+            titulo = "ERROR EN EL APARTADO: PESO ESPECÍFICO APARENTE";
+            mensaje = "El valor del peso específico debe estar relleno (Valor Final)";
+            mensajeAlerta(titulo, mensaje);
+            return false;
+        }
+        if (!tfValor.getText().isBlank()) {
+            Double valorMin = Double.parseDouble(lbValorMinimo.getText());
+            Double valorMax = Double.parseDouble(lbValorMaximo.getText());
+            Double valor = Double.parseDouble(tfValor.getText());
+
+            if (valor < valorMin) {
+                titulo = "ERROR EN EL APARTADO: PESO ESPECÍFICO APARENTE";
+                mensaje = "El valor del peso espcífico no puede ser inferior al valor mínimo";
+                mensajeAlerta(titulo, mensaje);
+                return false;
+            }
+            if (valor > valorMax) {
+                titulo = "ERROR EN EL APARTADO: PESO ESPECÍFICO APARENTE";
+                mensaje = "El valor del peso específico no puede ser superior al valor máximo";
+                mensajeAlerta(titulo, mensaje);
+                return false;
             }
         }
         return true;
