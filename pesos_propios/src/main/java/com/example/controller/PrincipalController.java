@@ -198,12 +198,12 @@ public class PrincipalController {
             String dimensiones;
             Double total;
             if (unidad.equals("kN/m3")) {
-                dimensiones = largo + "m x " + ancho + "m x " + espesor + "m";
+                dimensiones = largo + " m x " + ancho + " m x " + espesor + "m";
                 total = largo * ancho * espesor;
                 totalMetros3 += total;
             }
             else if (unidad.equals("kN/m2")) {
-                dimensiones = largo + "m x " + ancho + " m";
+                dimensiones = largo + " m x " + ancho + " m";
                 total = largo * ancho;
                 totalMetros2 += total;
             }

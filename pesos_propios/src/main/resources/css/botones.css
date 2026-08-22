@@ -1,0 +1,56 @@
+/* ESTILO DE LOS BOTONES */
+
+/* BOTÓN GENERAL */
+.button {
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-background-radius: 6px;
+    -fx-border-raidus: 6px;
+    -fx-padding: 8px 16px;
+    -fx-cursor: hand;
+}
+
+/* BOTÓN - CALCULO PREVIO */
+.btn-calculo {
+    -fx-background-color: #2563EB;
+}
+.btn-calculo:hover {
+    -fx-background-color: #1D4ED8;
+}
+.btn-calculo:pressed {
+    -fx-background-color: #1E40AF;
+}
+
+/* BOTÓN - AÑADIR A LA TABLA */
+.btn-anadir {
+    -fx-background-color: #16A34A;
+}
+.btn-anadir:hover {
+    -fx-background-color: #15803D;
+}
+.btn-anadir:pressed {
+    -fx-background-color: #166534;
+}
+
+/* BOTÓN - LIMPIAR DATOS */
+.btn-limpiar {
+    -fx-background-color: #64748B;
+}
+.btn-limpiar:hover {
+    -fx-background-color: #475569;
+}
+.btn-limpiar:pressed {
+    -fx-background-color: #334155;
+}
+
+/* BOTÓN - ELIMINAR FILA */
+.btn-eliminar {
+    -fx-background-color: #DC2626;
+}
+.btn-eliminar:hover {
+    -fx-background-color: #B91C1C;
+}
+.btn-eliminar:pressed {
+    -fx-background-color: #991B1B;
+}

@@ -71,10 +71,10 @@
             <Label fx:id="lbPesoEspecifico" alignment="CENTER_RIGHT" layoutX="102.0" layoutY="435.0" prefHeight="25.0" prefWidth="82.0" text="0.000" />
             <Label layoutX="10.0" layoutY="456.0" prefHeight="25.0" prefWidth="92.0" text="Peso propio:" />
             <Label fx:id="lbPesoPropio" alignment="CENTER_RIGHT" layoutX="102.0" layoutY="456.0" prefHeight="25.0" prefWidth="82.0" text="0.000" />
-            <Button layoutX="127.0" layoutY="494.0" mnemonicParsing="false" onAction="#addTabla" prefHeight="25.0" prefWidth="110.0" text="Añadir a tabla" />
-            <Button layoutX="8.0" layoutY="494.0" mnemonicParsing="false" onAction="#calculoPrevio" prefHeight="25.0" prefWidth="110.0" text="Calculo Previo" />
-            <Button layoutX="8.0" layoutY="526.0" mnemonicParsing="false" onAction="#limpiar" prefHeight="25.0" prefWidth="110.0" text="Limpiar datos" />
-            <Button layoutX="127.0" layoutY="526.0" mnemonicParsing="false" onAction="#eliminarFila" prefHeight="25.0" prefWidth="110.0" text="❌ Eliminar fila" />
+            <Button layoutX="127.0" layoutY="490.0" mnemonicParsing="false" onAction="#addTabla" prefHeight="25.0" prefWidth="110.0" styleClass="btn-anadir" stylesheets="@../css/botones.css" text="Añadir a tabla" />
+            <Button layoutX="8.0" layoutY="490.0" mnemonicParsing="false" onAction="#calculoPrevio" prefHeight="25.0" prefWidth="110.0" styleClass="btn-calculo" stylesheets="@../css/botones.css" text="Calculo Previo" />
+            <Button layoutX="8.0" layoutY="528.0" mnemonicParsing="false" onAction="#limpiar" prefHeight="25.0" prefWidth="110.0" styleClass="btn-limpiar" stylesheets="@../css/botones.css" text="Limpiar datos" />
+            <Button layoutX="127.0" layoutY="528.0" mnemonicParsing="false" onAction="#eliminarFila" prefHeight="25.0" prefWidth="110.0" styleClass="btn-eliminar" stylesheets="@../css/botones.css" text="Eliminar fila" />
             <Label fx:id="lbUnidad4" layoutX="191.0" layoutY="416.0" prefHeight="25.0" prefWidth="65.0" text="unidad" />
             <Label fx:id="lbUnidad5" layoutX="191.0" layoutY="435.0" prefHeight="25.0" prefWidth="65.0" text="unidad" />
             <Label layoutX="191.0" layoutY="456.0" prefHeight="25.0" prefWidth="65.0" text="kN" />
