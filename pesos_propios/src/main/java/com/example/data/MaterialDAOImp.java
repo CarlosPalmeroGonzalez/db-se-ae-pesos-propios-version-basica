@@ -1,9 +1,10 @@
 package com.example.data;
 
 import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 
 import com.example.model.Material;
@@ -12,12 +13,22 @@ public class MaterialDAOImp implements MaterialDAO {
 
     @Override
     public ArrayList<Material> informacionMateriales() {
+        /* Código antiguo:
         File archivo = new File ("pesos_propios\\src\\main\\resources\\data\\materiales.csv");
+        */
         BufferedReader buffReader = null;
         ArrayList <Material> listaMateriales = new ArrayList <> ();
+        InputStream inputStream = MaterialDAOImp.class.getResourceAsStream("/data/materiales.csv");
+        if (inputStream == null) {
+            System.out.println("ERROR: No se ha encontrado /data/materiales.csv");
+            return listaMateriales;
+        }
 
         try {
+            /* Código antiguo:
             buffReader = new BufferedReader (new FileReader (archivo));
+            */
+            buffReader = new BufferedReader (new InputStreamReader(inputStream, StandardCharsets.UTF_8));
             String linea = null;
             while ( (linea = buffReader.readLine()) != null ) {
                 String datos [] = linea.split(",");

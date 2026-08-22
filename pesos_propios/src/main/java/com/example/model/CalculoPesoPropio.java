@@ -17,6 +17,5 @@ public class CalculoPesoPropio {
     private String unidad;
     private Double pesoPropio;
 
-    // Posiblemente sea necesario crear una clase para el calculo del peso propio 
     
 }

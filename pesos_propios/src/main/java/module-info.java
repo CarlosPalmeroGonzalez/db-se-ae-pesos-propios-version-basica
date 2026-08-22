@@ -2,7 +2,7 @@ module com.example {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.graphics;
-    requires lombok;
+    requires static lombok;
     requires javafx.base;
 
     exports com.example.view;
