@@ -1,9 +1,0 @@
-com\example\data\MaterialDAOImp.class
-com\example\Launch.class
-com\example\model\CalculoPesoPropio.class
-com\example\test\Test.class
-module-info.class
-com\example\view\PrincipalView.class
-com\example\controller\PrincipalController.class
-com\example\data\MaterialDAO.class
-com\example\model\Material.class
